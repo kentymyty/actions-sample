@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:  
-  target_context: ${{ vars.TARGET_CONTEXT }}
+  target_environment: ${{ vars.TARGET_ENVIRONMENT }}
 
 jobs:
   build:
@@ -15,5 +15,5 @@ jobs:
     steps:
     - name: Build project
       run: |
-        echo "Hello $target_context"
+        echo "Hello $target_environment"
 
