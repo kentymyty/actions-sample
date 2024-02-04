@@ -15,9 +15,9 @@ jobs:
     steps:
     - name: Build project
       run: |
-        echo "Hello $target_environment"
-        echo "Hello $TARGET_ENVIRONMENT"
-        echo "Hello ${{ vars.ENVIRONMENT_STAGE }}"
-        echo "Hello ${{ env.target_environment }}"
-        echo "Hello ${{ env.TARGET_ENVIRONMENT }}"
+        # echo "Hello $target_environment"
+        # echo "Hello $TARGET_ENVIRONMENT"
+        echo "Hello ${{ vars.TARGET_ENVIRONMENT }}"
+        # echo "Hello ${{ env.target_environment }}"
+        # echo "Hello ${{ env.TARGET_ENVIRONMENT }}"
 
