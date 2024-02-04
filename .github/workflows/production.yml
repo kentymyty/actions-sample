@@ -1,4 +1,4 @@
-name: Hello World Workflow
+name: Production deploy
 
 on:
   schedule:
@@ -6,12 +6,14 @@ on:
     - cron: '5,35 1-14 * * *'
   workflow_dispatch:
 
+env:  
+  target_context: ${{ vars.TARGET_CONTEXT }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: Build project
       run: |
-        # npm install
-        # npm run build
-        echo "Hello World"
+        echo "Hello $target_context"
+

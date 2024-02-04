@@ -1,0 +1,19 @@
+name: Staging Deploy
+
+on:
+  schedule:
+    # # 10:05, 10:35から22:05, 22:35まで、05分と35分に実行
+    - cron: '5,35 1-14 * * *'
+  workflow_dispatch:
+
+env:  
+  target_context: ${{ vars.TARGET_CONTEXT }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Build project
+      run: |
+        echo "Hello $target_context"
+
