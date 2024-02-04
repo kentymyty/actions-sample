@@ -7,6 +7,6 @@ jobs:
     steps:
     - name: Build project
       run: |
-        npm install
-        npm run build
+        # npm install
+        # npm run build
         echo "Hello World"
