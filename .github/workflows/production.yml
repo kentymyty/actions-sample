@@ -15,4 +15,11 @@ jobs:
       run: |
         echo "Hello world!"
         echo ${{ vars.TARGET_ENVIRONMENT }}
+        echo "Hello, ${{ vars.TARGET_ENVIRONMENT }}!" > output.txt
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: echo-output
+        path: output.txt
 
