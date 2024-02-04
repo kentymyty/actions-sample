@@ -1,0 +1,2 @@
+# actions-sample
+Github actionsをテストするためのリポジトリです
