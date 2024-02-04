@@ -6,8 +6,8 @@ on:
     - cron: '5,35 1-14 * * *'
   workflow_dispatch:
 
-env: 
-  target_environment: ${{ vars.TARGET_ENVIRONMENT }}
+# env: 
+#   target_environment: ${{ vars.TARGET_ENVIRONMENT }}
 
 jobs:
   build:
