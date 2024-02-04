@@ -12,5 +12,5 @@ jobs:
     steps:
     - name: Build project
       run: |
-        echo "Hello ${{ vars.TARGET_ENVIRONMENT }}"
+        echo "Hello ${{ secrets.TARGET_ENVIRONMENT }}"
 
