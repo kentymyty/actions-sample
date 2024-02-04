@@ -1,6 +1,11 @@
 name: Hello World Workflow
 
-on: [push]
+on:
+  schedule:
+    # # 10:05, 10:35から22:05, 22:35まで、05分と35分に実行
+    - cron: '5,35 1-14 * * *'
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
