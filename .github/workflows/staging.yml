@@ -6,14 +6,13 @@ on:
     - cron: '5,35 1-14 * * *'
   workflow_dispatch:
 
-env:  
-  target_environment: ${{ vars.TARGET_ENVIRONMENT }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: staging
     steps:
     - name: Build project
       run: |
-        echo "Hello $target_environment"
+        echo "Hello world!"
+        echo ${{ vars.TARGET_ENVIRONMENT }}
 
